@@ -1,0 +1,98 @@
+{
+  "nome": "Analise de risco de credito",
+  "descricao": "Base de exemplo derivada dos 14 exemplos da Questao 1 (Luger): historia, divida, garantia e renda.",
+  "objetivos": [
+    "risco",
+    "decisao"
+  ],
+  "perguntas": {
+    "historia de credito": {
+      "texto": "Qual a historia de credito?",
+      "opcoes": [
+        "boa",
+        "ruim",
+        "desconhecida"
+      ]
+    },
+    "divida": {
+      "texto": "Qual o nivel de divida?",
+      "opcoes": [
+        "alta",
+        "baixa"
+      ]
+    },
+    "garantia": {
+      "texto": "Qual a garantia oferecida?",
+      "opcoes": [
+        "nenhuma",
+        "adequada"
+      ]
+    },
+    "renda": {
+      "texto": "Qual a faixa de renda?",
+      "opcoes": [
+        "0 a 15k",
+        "15 a 35k",
+        "acima de 35k"
+      ]
+    }
+  },
+  "fatos": [],
+  "regras": [
+    {
+      "id": "R1",
+      "regra": "SE renda = 0 a 15k ENTAO risco = alto",
+      "descricao": "E1, E4, E7, E11"
+    },
+    {
+      "id": "R2",
+      "regra": "SE renda = 15 a 35k E historia de credito = ruim ENTAO risco = alto",
+      "descricao": "E14"
+    },
+    {
+      "id": "R3",
+      "regra": "SE renda = 15 a 35k E historia de credito = boa ENTAO risco = moderado",
+      "descricao": "E12"
+    },
+    {
+      "id": "R4",
+      "regra": "SE renda = 15 a 35k E historia de credito = desconhecida E divida = alta ENTAO risco = alto",
+      "descricao": "E2"
+    },
+    {
+      "id": "R5",
+      "regra": "SE renda = 15 a 35k E historia de credito = desconhecida E divida = baixa ENTAO risco = moderado",
+      "descricao": "E3"
+    },
+    {
+      "id": "R6",
+      "regra": "SE renda = acima de 35k E historia de credito = ruim ENTAO risco = moderado",
+      "descricao": "E8"
+    },
+    {
+      "id": "R7",
+      "regra": "SE renda = acima de 35k E historia de credito != ruim ENTAO risco = baixo",
+      "descricao": "E5, E6, E9, E10, E13"
+    },
+    {
+      "id": "R8",
+      "regra": "SE risco = baixo ENTAO decisao = aprovar",
+      "descricao": ""
+    },
+    {
+      "id": "R9",
+      "regra": "SE risco = moderado E garantia = adequada ENTAO decisao = aprovar",
+      "descricao": ""
+    },
+    {
+      "id": "R10",
+      "regra": "SE risco = moderado E garantia = nenhuma ENTAO decisao = aprovar com juros maiores",
+      "descricao": ""
+    },
+    {
+      "id": "R11",
+      "regra": "SE risco = alto ENTAO decisao = negar",
+      "descricao": ""
+    }
+  ]
+}

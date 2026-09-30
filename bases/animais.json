@@ -1,0 +1,152 @@
+{
+  "nome": "Classificacao de animais",
+  "descricao": "Identifica um animal a partir de suas caracteristicas (classe -> ordem -> animal).",
+  "objetivos": [
+    "animal"
+  ],
+  "perguntas": {
+    "cobertura": {
+      "texto": "Qual a cobertura do corpo?",
+      "opcoes": [
+        "pelo",
+        "penas",
+        "escamas",
+        "nenhuma"
+      ]
+    },
+    "amamenta": {
+      "texto": "O animal amamenta os filhotes?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "voa": {
+      "texto": "O animal voa?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "poe ovos": {
+      "texto": "O animal poe ovos?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "alimentacao": {
+      "texto": "Qual a alimentacao?",
+      "opcoes": [
+        "carne",
+        "plantas",
+        "ambos"
+      ]
+    },
+    "cascos": {
+      "texto": "O animal tem cascos?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "cor": {
+      "texto": "Qual a cor predominante?",
+      "opcoes": [
+        "pardo amarelado",
+        "preto e branco",
+        "outra"
+      ]
+    },
+    "padrao": {
+      "texto": "Qual o padrao no corpo?",
+      "opcoes": [
+        "manchas escuras",
+        "listras pretas",
+        "nenhum"
+      ]
+    },
+    "pescoco longo": {
+      "texto": "O pescoco e longo?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "nada": {
+      "texto": "O animal nada bem?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    }
+  },
+  "fatos": [],
+  "regras": [
+    {
+      "id": "R1",
+      "regra": "SE cobertura = pelo ENTAO classe = mamifero",
+      "descricao": ""
+    },
+    {
+      "id": "R2",
+      "regra": "SE amamenta = sim ENTAO classe = mamifero",
+      "descricao": ""
+    },
+    {
+      "id": "R3",
+      "regra": "SE cobertura = penas ENTAO classe = ave",
+      "descricao": ""
+    },
+    {
+      "id": "R4",
+      "regra": "SE voa = sim E poe ovos = sim ENTAO classe = ave",
+      "descricao": ""
+    },
+    {
+      "id": "R5",
+      "regra": "SE classe = mamifero E alimentacao = carne ENTAO ordem = carnivoro",
+      "descricao": ""
+    },
+    {
+      "id": "R6",
+      "regra": "SE classe = mamifero E cascos = sim ENTAO ordem = ungulado",
+      "descricao": ""
+    },
+    {
+      "id": "R7",
+      "regra": "SE ordem = carnivoro E cor = pardo amarelado E padrao = manchas escuras ENTAO animal = guepardo",
+      "descricao": ""
+    },
+    {
+      "id": "R8",
+      "regra": "SE ordem = carnivoro E cor = pardo amarelado E padrao = listras pretas ENTAO animal = tigre",
+      "descricao": ""
+    },
+    {
+      "id": "R9",
+      "regra": "SE ordem = ungulado E pescoco longo = sim E padrao = manchas escuras ENTAO animal = girafa",
+      "descricao": ""
+    },
+    {
+      "id": "R10",
+      "regra": "SE ordem = ungulado E padrao = listras pretas ENTAO animal = zebra",
+      "descricao": ""
+    },
+    {
+      "id": "R11",
+      "regra": "SE classe = ave E voa = nao E nada = sim E cor = preto e branco ENTAO animal = pinguim",
+      "descricao": ""
+    },
+    {
+      "id": "R12",
+      "regra": "SE classe = ave E voa = nao E pescoco longo = sim E cor = preto e branco ENTAO animal = avestruz",
+      "descricao": ""
+    },
+    {
+      "id": "R13",
+      "regra": "SE classe = ave E voa = sim ENTAO animal = albatroz",
+      "descricao": ""
+    }
+  ]
+}

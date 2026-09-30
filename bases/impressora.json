@@ -1,0 +1,112 @@
+{
+  "nome": "Diagnostico de impressora",
+  "descricao": "Suporte tecnico: identifica a falha de uma impressora e sugere a acao corretiva.",
+  "objetivos": [
+    "falha",
+    "acao"
+  ],
+  "perguntas": {
+    "liga": {
+      "texto": "A impressora liga (acende alguma luz)?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "cabo energia": {
+      "texto": "O cabo de energia esta como?",
+      "opcoes": [
+        "conectado",
+        "desconectado"
+      ]
+    },
+    "papel preso": {
+      "texto": "Ha papel preso na impressora?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    },
+    "nivel tinta": {
+      "texto": "Qual o nivel de tinta (0 a 100 %)?"
+    },
+    "impressao": {
+      "texto": "Como sai a impressao?",
+      "opcoes": [
+        "normal",
+        "branca",
+        "manchada"
+      ]
+    },
+    "aparece no computador": {
+      "texto": "A impressora aparece na lista do computador?",
+      "opcoes": [
+        "sim",
+        "nao"
+      ]
+    }
+  },
+  "fatos": [],
+  "regras": [
+    {
+      "id": "R1",
+      "regra": "SE liga = nao E cabo energia = desconectado ENTAO falha = cabo desconectado",
+      "descricao": ""
+    },
+    {
+      "id": "R2",
+      "regra": "SE liga = nao E cabo energia = conectado ENTAO falha = fonte de alimentacao",
+      "descricao": ""
+    },
+    {
+      "id": "R3",
+      "regra": "SE liga = sim E papel preso = sim ENTAO falha = atolamento de papel",
+      "descricao": ""
+    },
+    {
+      "id": "R4",
+      "regra": "SE liga = sim E papel preso = nao E nivel tinta < 10 ENTAO falha = cartucho vazio",
+      "descricao": "regra numerica"
+    },
+    {
+      "id": "R5",
+      "regra": "SE liga = sim E papel preso = nao E impressao = manchada ENTAO falha = cabecote sujo",
+      "descricao": ""
+    },
+    {
+      "id": "R6",
+      "regra": "SE liga = sim E papel preso = nao E aparece no computador = nao ENTAO falha = driver ou conexao",
+      "descricao": ""
+    },
+    {
+      "id": "R7",
+      "regra": "SE falha = cabo desconectado ENTAO acao = conectar o cabo de energia e testar novamente",
+      "descricao": ""
+    },
+    {
+      "id": "R8",
+      "regra": "SE falha = fonte de alimentacao ENTAO acao = testar outra tomada; se persistir, levar a assistencia",
+      "descricao": ""
+    },
+    {
+      "id": "R9",
+      "regra": "SE falha = atolamento de papel ENTAO acao = desligar, abrir a tampa e retirar o papel com cuidado",
+      "descricao": ""
+    },
+    {
+      "id": "R10",
+      "regra": "SE falha = cartucho vazio ENTAO acao = substituir o cartucho",
+      "descricao": ""
+    },
+    {
+      "id": "R11",
+      "regra": "SE falha = cabecote sujo ENTAO acao = executar a limpeza de cabecote pelo painel",
+      "descricao": ""
+    },
+    {
+      "id": "R12",
+      "regra": "SE falha = driver ou conexao ENTAO acao = reinstalar o driver e verificar o cabo USB ou a rede",
+      "descricao": ""
+    }
+  ]
+}
