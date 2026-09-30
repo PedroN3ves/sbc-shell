@@ -180,6 +180,6 @@ sbc> como animal
 - Um valor por atributo por consulta (sem atributos multivalorados).
 - A linguagem natural é baseada em padrões e cobre um conjunto controlado de frases.
 
-## Autor
+## Autores
 
-Nome do aluno – disciplina de Inteligência Artificial (Prof. Evandro Costa), 2026.2.
+Pedro Neves (202413121) – disciplina de Inteligência Artificial (Prof. Evandro Costa), 2026.2.
