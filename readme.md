@@ -58,7 +58,7 @@ python shell_sbc.py bases/credito.json --modo tras
 
 ## Representação do conhecimento
 
-**Fatos** têm a forma `atributo = valor` (ex.: `cor = pardo amarelado`). Um atributo sem operador (`febre`) equivale a `febre = sim`.
+**Fatos** têm a forma `atributo = valor` (ex: `cor = pardo amarelado`). Um atributo sem operador (`febre`) equivale a `febre = sim`.
 
 **Regras** têm a forma:
 
