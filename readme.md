@@ -183,3 +183,5 @@ sbc> como animal
 ## Autores
 
 Pedro Neves (202413121) – disciplina de Inteligência Artificial (Prof. Evandro Costa), 2026.2.
+
+Otávio Fernandes de Oliveira (202413284) - disciplina de Inteligência Artificial (Prof. Evandro Costa), 2026.2.
